@@ -55,7 +55,7 @@ class Product:
         if boom < 10:
             return '...fizzle'
         elif (boom >= 10) & (boom < 50):
-            return '...boom'
+            return '...boom!'
         else:
             return '...BABOOM'
 
