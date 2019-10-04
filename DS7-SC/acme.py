@@ -58,3 +58,29 @@ class Product:
             return '...boom'
         else:
             return '...BABOOM'
+
+    # Part 3 - A Proper Inheritance
+
+class BoxingGlove(Product):
+    '''
+    Boxing Glove product that inherits from product
+    '''
+    def __init__(self, name):
+        super().__init__(name=name, weight=10)
+
+    def explode(self):
+        '''
+        Gloves don't explode...
+        '''
+        return "...it's a glove"
+
+    def punch(self):
+        '''
+        returns how much the gloves hurt based on weight
+        '''
+        if self.weight < 5:
+            return 'That tickles.'
+        elif (self.weight >= 5) & (self.weight < 15):
+            return "Hey that hurt!"
+        else:
+            return "OUCH!"
