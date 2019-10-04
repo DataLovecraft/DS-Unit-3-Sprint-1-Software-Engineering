@@ -32,3 +32,29 @@ class Product:
         self.weight = weight
         self.flammability = flammability
         self.identifier = identifier
+
+    # part 2 - Objects that Go!
+
+    def stealability(self):
+        '''
+        Identifies if a product is easy to steal based on weight
+        '''
+        steal = self.price / self.weight
+        if steal < 0.5:
+            return 'Not so stealable'
+        elif (steal >= 0.5) & (steal < 1.0):
+            return 'Kinda stealable'
+        else:
+            return 'Very stealable'
+
+    def explode(self):
+        '''
+        calculates flammability times the weight
+        '''
+        boom = self.flammability * self.weight
+        if boom < 10:
+            return '...fizzle'
+        elif (boom >= 10) & (boom < 50):
+            return '...boom'
+        else:
+            return '...BABOOM'
